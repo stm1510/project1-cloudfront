@@ -17,11 +17,12 @@ jobs:
       - run:
           name: "Say hello"
           command: "echo Hello, World!"
-    print_tq:
-      docker :
-        - image : cimg/base:stable
-      steps :
-        - run :
+  print_tq:
+    docker :
+      - image : cimg/base:stable
+    steps :
+      - checkout
+      - run :
           name : " Hello tq "
           command : "echo Hello tq "
 
